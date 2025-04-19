@@ -1,4 +1,19 @@
+import os
 import streamlit as st
+import tempfile
+import cv2
+import torch
+import asyncio
+import numpy as np
+import edge_tts
+import sounddevice as sd
+import soundfile as sf
+import time
+import logging
+from concurrent.futures import ThreadPoolExecutor
+from transformers import BlipProcessor, BlipForConditionalGeneration
+from PIL import Image
+from google.generativeai import configure, GenerativeModel
 
 # ------------------------ STREAMLIT UI NAVIGATION ------------------------
 st.set_page_config(page_title="CrickVision AI", layout="wide")
@@ -29,22 +44,12 @@ if app_mode == "🏠 Home":
 elif app_mode == "🎥 Real-time Commentary":
     st.title("🎥 Real-time AI Cricket Commentary")
 
-    import tempfile
-    import os
-    import cv2
-    import torch
-    import asyncio
-    import numpy as np
-    import edge_tts
-    import sounddevice as sd
-    import soundfile as sf
-    import time
-    import logging
-    from concurrent.futures import ThreadPoolExecutor
-    from transformers import BlipProcessor, BlipForConditionalGeneration
-    from PIL import Image
-    from google.generativeai import configure, GenerativeModel
-    # Logging
+    # ------------------------ CLOUD CONFIGURATION ------------------------
+    API_KEY = os.getenv("GEMINI_API_KEY")  # Fetch Gemini API Key from environment
+    if not API_KEY:
+        st.error("API Key for Gemini is missing! Make sure to set it in the environment variables.")
+
+    # ------------------------ Logging ------------------------
     logging.basicConfig(filename='logs.txt', level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -64,8 +69,7 @@ elif app_mode == "🎥 Real-time Commentary":
         "Funny Style": "use humorous and light-hearted tone to comment on the incident.",
     }
 
-    # Configs
-    cv2.setNumThreads(0)
+    # ------------------------ Setup ------------------------
     configure(api_key="AIzaSyBRZ9cEMHE6Ys8jt27EuACWP7TEM7C2Yac")
     model_gemini = GenerativeModel("gemini-2.0-flash")
     blip_saved_model_path = "blip_saved_model4"

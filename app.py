@@ -44,7 +44,6 @@ elif app_mode == "🎥 Real-time Commentary":
     from transformers import BlipProcessor, BlipForConditionalGeneration
     from PIL import Image
     from google.generativeai import configure, GenerativeModel
-
     # Logging
     logging.basicConfig(filename='logs.txt', level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')

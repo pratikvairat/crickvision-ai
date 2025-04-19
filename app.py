@@ -45,10 +45,7 @@ elif app_mode == "🎥 Real-time Commentary":
     st.title("🎥 Real-time AI Cricket Commentary")
 
     # ------------------------ CLOUD CONFIGURATION ------------------------
-    API_KEY = os.getenv("GEMINI_API_KEY")  # Fetch Gemini API Key from environment
-    if not API_KEY:
-        st.error("API Key for Gemini is missing! Make sure to set it in the environment variables.")
-
+    
     # ------------------------ Logging ------------------------
     logging.basicConfig(filename='logs.txt', level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s')

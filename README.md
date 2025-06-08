@@ -47,7 +47,7 @@ This project presents an innovative system that automatically generates real-tim
 
 # Step 1: Clone the repository
 
-git clone https://github.com/your-username/ai-cricket-commentary.git
+git clone [https://github.com/your-username/ai-cricket-commentary](https://github.com/pratikvairat/crickvision-ai)
 cd ai-cricket-commentary
 
 # Step 2: Install dependencies

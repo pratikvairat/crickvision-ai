@@ -1,4 +1,4 @@
-<h1>AI Cricket Commentary Generator</h1>
+# AI Cricket Commentary Generator
 
 ## 📌 Project Title
 

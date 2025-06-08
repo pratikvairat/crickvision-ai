@@ -16,7 +16,7 @@ from PIL import Image
 from google.generativeai import configure, GenerativeModel
 
 # ------------------------ STREAMLIT UI NAVIGATION ------------------------
-st.set_page_config(page_title="CrickVision AI", layout="wide")
+st.set_page_config(page_title="CrickComm AI", layout="wide")
 
 # Sidebar for navigation
 import streamlit as st
@@ -116,10 +116,10 @@ if app_mode == "🏠 Home":
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="main-title">🏏 CrickVision AI</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">🏏 CrickComm AI</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Real-time multilingual cricket commentary powered by state-of-the-art AI</div>', unsafe_allow_html=True)
 
-    st.subheader("✨ Why Choose CrickVision AI?")
+    st.subheader("✨ Why Choose CrickComm AI?")
     row1_col1, row1_col2, row1_col3 = st.columns(3)
 
     with row1_col1:
@@ -144,7 +144,7 @@ if app_mode == "🏠 Home":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="footer-note">© 2025 CrickVision AI | Built with ❤️ by Pratik Vairat</div>', unsafe_allow_html=True)
+    st.markdown('<div class="footer-note">© 2025 CrickComm AI | Built with ❤️ by Pratik Vairat</div>', unsafe_allow_html=True)
 
 # ------------------------ 🎥 MAIN FEATURE ------------------------
 elif app_mode == "🎥 Real-time Commentary":
@@ -174,7 +174,7 @@ elif app_mode == "🎥 Real-time Commentary":
     }
 
     COMMENTARY_STYLES = {
-        "Akash Chorda Style": "as Akash Chopra, deliver thrilling and witty cricket commentary.",
+        "Akash Chopra Style": "as Akash Chopra, deliver thrilling and witty cricket commentary.",
         "Bollywood Style": "in a dramatic Bollywood-style tone, add flair and emotions to the commentary.",
         "Shayari Style": "in poetic Shayari form, describe the incident creatively.",
         "Funny Style": "use humorous and light-hearted tone to comment on the incident.",
@@ -299,7 +299,7 @@ elif app_mode == "🎥 Real-time Commentary":
 
 # ------------------------ 📘 ABOUT PAGE ------------------------
 elif app_mode == "📘 About":
-    st.title("ℹ️ About CrickVision AI")
+    st.title("ℹ️ About CrickComm AI")
 
     st.markdown("### 🏏 Real-time AI Cricket Commentary Engine")
 
@@ -388,7 +388,7 @@ elif app_mode == "📘 About":
 # ------------------------ ❓ FAQ PAGE ------------------------
 elif app_mode == "❓ FAQ":
     st.title("❓ Frequently Asked Questions")
-    st.markdown("Browse through common questions related to CrickVision AI.")
+    st.markdown("Browse through common questions related to CrickComm AI.")
 
     with st.expander("📁 What kind of videos can I upload?"):
         st.markdown("""
@@ -456,7 +456,7 @@ elif app_mode == "❓ FAQ":
 elif app_mode == "🔒 Privacy Policy":
     st.title("🔒 Privacy Policy")
     st.markdown("""
-    ### CrickVision AI – Privacy Policy
+    ### CrickComm AI – Privacy Policy
 
     **Effective Date:** April 2025  
     **Project Type:** BE Final Year Project (Information Technology)  
@@ -488,7 +488,7 @@ elif app_mode == "🔒 Privacy Policy":
     - There is **no user login or authentication system**, and no user profiles are created.
 
     #### ❗ Disclaimer
-    - CrickVision AI is an experimental prototype.
+    - CrickComm AI is an experimental prototype.
     - Users are responsible for any data they upload.
     - We are not liable for misuse of the app or the output generated.
 
@@ -505,7 +505,7 @@ elif app_mode == "🔒 Privacy Policy":
 elif app_mode == "© Copyright":
     st.title("© Copyright")
     st.markdown("""
-    All rights to **CrickVision AI** are reserved by **Pratik Vairat**.
+    All rights to **CrickComm AI** are reserved by **Pratik Vairat**.
 
     ### Copyright Information:
     > This project is a **Final Year BE project** developed by Pratik Vairat at **Trinity Academy of Engineering, Pune**.  
